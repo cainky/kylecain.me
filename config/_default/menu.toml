@@ -14,3 +14,11 @@ url = "https://github.com/cainky"
 
 [social.params]
 icon = "brand-github"
+
+[[social]]
+identifier = "linkedin"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/kyle-cain/"
+
+[social.params]
+icon = "brand-linkedin"
