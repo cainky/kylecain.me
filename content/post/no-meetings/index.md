@@ -102,7 +102,7 @@ Often, decisions are communicated in terms of what needs to be done, with less e
 
 - **Promoting Ownership and Accountability**: Understanding the principles that influence a decision can lead to greater ownership of the outcomes. Team members are more likely to feel accountable for results when they grasp the core reasons for a particular course of action and feel involved in the decision making process.
 
-Examples of writing-first culture
+# Examples of writing-first culture
 
 The written-first culture can be exemplified best by companies that have not only embraced this approach internally but also made their documentation accessible to the wider public. Some notable examples are Stripe, Amazon, Basecamp, and GitLab.
 
@@ -110,21 +110,21 @@ Let's look at GitLab briefly. Their extensive company handbook is publicly avail
 
 # Implementing a Writing-First Culture in Your Company
 
-Lead by Example: Begin by incorporating a written-first approach in your personal communication. Instead of spontaneously calling for meetings, send detailed emails or memos outlining your thoughts. Encourage team members to spend time crafting well-thought-out written communication instead of hastily typed messages.
+**Lead by Example**: Begin by incorporating a written-first approach in your personal communication. Instead of spontaneously calling for meetings, send detailed emails or memos outlining your thoughts. Encourage team members to spend time crafting well-thought-out written communication instead of hastily typed messages.
 
 If a meeting is necessary, ensure it begins with a written agenda. Encourage team members to write down the main points they wish to discuss. This ensures everyone is prepared and can contribute effectively, reducing the need for follow-up meetings. Post-meeting, emphasize the importance of recording key decisions in writing.
 
-Establish Clear Guidelines: Create a handbook or guidelines on when written communication is preferred over meetings. For example, updates, status checks, and sharing of routine information can be better served through written mediums.
+**Establish Clear Guidelines**: Create a handbook or guidelines on when written communication is preferred over meetings. For example, updates, status checks, and sharing of routine information can be better served through written mediums.
 
-Tools and Resources: Use collaborative document and knowledge sharing platforms (Notion, Jira) to foster this shift. There are also various tools available, like Grammarly or Hemingway App, that can assist writers in crafting clear and concise content. Encourage their use.
+**Tools and Resources**: Use collaborative document and knowledge sharing platforms (Notion, Jira) to foster this shift. There are also various tools available, like Grammarly or Hemingway App, that can assist writers in crafting clear and concise content. Encourage their use.
 
-Create templates: Give teammates a starting point with sample docs, create templates that other teams can use as inspiration for their own documents.
+**Create templates**: Give teammates a starting point with sample docs, create templates that other teams can use as inspiration for their own documents.
 
-Allocate 'No Meeting' Days: Designate specific days of the week as 'no meeting' days, allowing team members to focus solely on their tasks. This encourages them to communicate through written channels on these days.
+**Allocate 'No Meeting' Days**: Designate specific days of the week as 'no meeting' days, allowing team members to focus solely on their tasks. This encourages them to communicate through written channels on these days.
 
-Celebrate Success: Identify and champion team members who excel at written communication. By elevating and recognizing their expertise, they can naturally help guide and establish a robust infrastructure for a writing-first culture.
+**Celebrate Success**: Identify and champion team members who excel at written communication. By elevating and recognizing their expertise, they can naturally help guide and establish a robust infrastructure for a writing-first culture.
 
-Tracking, Review & Adapt: Implement a system to track and analyze the number, duration, and outcomes of meetings. Tools like Microsoft Outlook's Insights or platforms like Time is Ltd. can provide data on how much time is spent in meetings. After a few months, gather feedback on the new approach. Understand any challenges faced by the team and address them.
+**Tracking, Review & Adapt**: Implement a system to track and analyze the number, duration, and outcomes of meetings. Tools like Microsoft Outlook's Insights or platforms like Time is Ltd. can provide data on how much time is spent in meetings. After a few months, gather feedback on the new approach. Understand any challenges faced by the team and address them.
 
 Here are some other helpful tips to remember
 
