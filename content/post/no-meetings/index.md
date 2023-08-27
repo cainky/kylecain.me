@@ -1,8 +1,6 @@
 ---
 title: "Less Talk, More Action: Cut Through the Noise of Endless Meetings"
-description: "Imagine this: You're in a meeting room or Zoom call, listening to the discussion, but you can't help but glance at your mounting list of tasks. You're thinking about the code you could be debugging, the document you could be drafting, or the designs you could be reviewing. As the conversation continues to meander, going past the scheduled time limit, there's still a noticeable absence of concrete action items or documented decisions made, and as it concludes you are left with a lingering sense of ambiguity.
-
-Sound familiar? It should. According to a study by Atlassian, the average employee attends 62 meetings a month and considers half of them as time wasted. In a modern corporate landscape, meetings have become the default mode of communication and decision-making. But do they always serve our best interests? Quite frequently, the answer is no. An over-reliance on meetings can lead to wasted hours, dwindling productivity, and an overarching sense of meeting fatigue."
+description: "According to a study by Atlassian, the average employee attends 62 meetings a month and considers half of them as time wasted. In a modern corporate landscape, meetings have become the default mode of communication and decision-making. But do they always serve our best interests? Quite frequently, the answer is no. An over-reliance on meetings can lead to wasted hours, dwindling productivity, and an overarching sense of meeting fatigue."
 slug: no-meetings
 date: 2023-08-27 00:00:00+0000
 image: cover.png
