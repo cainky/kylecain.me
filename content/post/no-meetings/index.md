@@ -53,7 +53,7 @@ Makers thrive on large, undisturbed chunks of time, while managers operate on a 
 
 Adding onto this, since most influential people within a company are typically on the manager's schedule, this can make it hard for makers to push back. It's essential for companies to recognize there are implicit power dynamics that often push makers to accept this fragmentation. 
 
-![The current state of meetings](./current-state-of-meetings.png)
+![The current state of meetings](current-state-of-meetings.png)
 
 
 ## The Merits of a Written-First Culture
@@ -199,4 +199,4 @@ In conclusion, shifting to a written-first culture can have significant benefits
 
 To aid in remembering these concepts, you can save this helpful infographic summarizing the key points of running successful meetings.
 
-![Tips for running successful meetings](./meeting-tips.png)
+![Tips for running successful meetings](meeting-tips.png)
