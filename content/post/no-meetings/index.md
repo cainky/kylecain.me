@@ -11,7 +11,7 @@ tags:
 ---
 Imagine this: You're in a meeting room or Zoom call, listening to the discussion, but you can't help but glance at your mounting list of tasks. You're thinking about the code you could be debugging, the document you could be drafting, or the designs you could be reviewing. As the conversation continues to meander, going past the scheduled time limit, there's still a noticeable absence of concrete action items or documented decisions made, and as it concludes you are left with a lingering sense of ambiguity.
 
-Sound familiar? It should. According to a study by Atlassian, the average employee attends 62 meetings a month and considers half of them as time wasted. In a modern corporate landscape, meetings have become the default mode of communication and decision-making. But do they always serve our best interests? Quite frequently, the answer is no. An over-reliance on meetings can lead to wasted hours, dwindling productivity, and an overarching sense of meeting fatigue.
+Sound familiar? It should. [According to a study by Atlassian](https://www.atlassian.com/time-wasting-at-work-infographic), the average employee attends 62 meetings a month and considers half of them as time wasted. In a modern corporate landscape, meetings have become the default mode of communication and decision-making. But do they always serve our best interests? Quite frequently, the answer is no. An over-reliance on meetings can lead to wasted hours, dwindling productivity, and an overarching sense of meeting fatigue.
 
 ## The Perils of Excessive Meetings
 
@@ -21,7 +21,7 @@ Meetings are an important part of any business. They bring teams together and fo
 
 Each meeting consumes not just its allocated duration but also the preparation time and the time it takes for employees to switch their focus from their tasks to the meeting, and vice versa. Over time, these hours add up, and excessive meetings can become one of the biggest time-drainers for teams, leaving little time for actual work. With a significant chunk of the workday spent in meetings, employees often rush through their tasks to meet deadlines. This can lead to mistakes, oversight, and reduced quality of work.
 
-Meetings require mental and emotional energy. Continuous or back-to-back meetings can leave employees feeling drained, leading to decreased productivity for the rest of the day. This is especially true for introverted team members who might find constant social interaction taxing. The phenomenon of Zoom fatigue during the pandemic is a glaring example of the physical and psychological toll of excessive meetings.
+Meetings require mental and emotional energy. Continuous or back-to-back meetings can leave employees feeling drained, leading to decreased productivity for the rest of the day. This is especially true for introverted team members who might find constant social interaction taxing. The phenomenon of [Zoom fatigue](https://en.wikipedia.org/wiki/Zoom_fatigue) during the pandemic is a glaring example of the physical and psychological toll of excessive meetings.
 
 On the face of it, a one-hour meeting might seem innocuous. But when multiple team members are involved, the cumulative hours add up. For instance, a one-hour meeting with five team members equates to five work hours. When quantifying meetings in this manner it's imperative to ask if the return on this time investment is truly beneficial.
 
@@ -29,11 +29,11 @@ Every hour spent in a meeting is an hour not spent on other productive tasks. Th
 
 ### Decision Fatigue
 
-With more meetings comes more decisions. Every decision, big or small, requires mental effort. Just as our physical muscles get tired with use, so does our brain's decision-making capacity. The constant need to make decisions during these meetings can lead to decision fatigue, where the quality of decisions deteriorates after a long session of decision-making.
+With more meetings comes more decisions. Every decision, big or small, requires mental effort. Just as our physical muscles get tired with use, so does our brain's decision-making capacity. The constant need to make decisions during these meetings can lead to [decision fatigue](https://en.wikipedia.org/wiki/Decision_fatigue), where the quality of decisions deteriorates after a long session of decision-making.
 
 ### Groupthink mentality
 
-An over-reliance on meetings can lead to a groupthink mentality, where unique perspectives are suppressed in favor of conformity. Groupthink is a phenomenon where the desire for group consensus overrides people's common sense desire to present alternatives, critique a position, or express an unpopular opinion. It often results in irrational decision-making outcomes. The urge to conform and the aversion to dissent can stifle innovation, limit diverse perspectives, and sometimes even lead to costly mistakes.
+An over-reliance on meetings can lead to a [groupthink](https://en.wikipedia.org/wiki/Groupthink) mentality, where unique perspectives are suppressed in favor of conformity. Groupthink is a phenomenon where the desire for group consensus overrides people's common sense desire to present alternatives, critique a position, or express an unpopular opinion. It often results in irrational decision-making outcomes. The urge to conform and the aversion to dissent can stifle innovation, limit diverse perspectives, and sometimes even lead to costly mistakes.
 
 ### Loss of valuable ideas
 
@@ -64,7 +64,7 @@ The act of writing promotes reflection. When one has to put pen to paper (or fin
 
 ### Asynchronous
 
-Writing is asynchronous, which simply means exchanging information without the expectation of an immediate response. Asynchronous communication enables team members to process information more deeply, to work during their most productive hours, and to minimize interruptions.This can foster a sense of trust. When team members trust that they can catch up on and contribute to discussions in their own time, there’s less pressure to be constantly "plugged in" and more time for deep work and reflection. This uninterrupted focus time often ignites that creative spark that arises when one has the space to deeply contemplate and innovate in their work. By reducing the constant barrage of real-time demands, team members can do their best work.
+Writing is [asynchronous](https://about.gitlab.com/company/culture/all-remote/asynchronous/), which simply means exchanging information without the expectation of an immediate response. Asynchronous communication enables team members to process information more deeply, to work during their most productive hours, and to minimize interruptions.This can foster a sense of trust. When team members trust that they can catch up on and contribute to discussions in their own time, there’s less pressure to be constantly "plugged in" and more time for deep work and reflection. This uninterrupted focus time often ignites that creative spark that arises when one has the space to deeply contemplate and innovate in their work. By reducing the constant barrage of real-time demands, team members can do their best work.
 
 In a world that's rapidly embracing remote work, this also ensures that team members across different time zones and geographies can engage with the content. This ensures that everyone, irrespective of their location or schedule, is included in crucial conversations.
 
@@ -102,9 +102,9 @@ Often, decisions are communicated in terms of what needs to be done, with less e
 
 ## Examples of writing-first culture
 
-The written-first culture can be exemplified best by companies that have not only embraced this approach internally but also made their documentation accessible to the wider public. Some notable examples are Stripe, Amazon, Basecamp, and GitLab.
+The written-first culture can be exemplified best by companies that have not only embraced this approach internally but also made their documentation accessible to the wider public. Some notable examples are [Stripe](https://slab.com/blog/stripe-writing-culture/), [Amazon](https://slab.com/blog/jeff-bezos-writing-management-strategy/), [Basecamp](https://basecamp.com/guides/how-we-communicate), and [GitLab](https://slab.com/guides/how-success-is-written/gitlab-writing-offers-single-source-of-truth/).
 
-Let's look at GitLab briefly. Their extensive company handbook is publicly available online, and it exemplifies the depth of thought and commitment to a written-first ethos. With over 2,000 pages detailing everything from the company's vision and values to specific operational guidelines, it's a testament to the power of written documentation in ensuring clarity, alignment, and transparency. New employees can hit the ground running, having access to a reservoir of knowledge, while stakeholders and potential partners get an in-depth understanding of the company's ethos, strategies, and processes.
+Let's look at GitLab briefly. [Their extensive company handbook is publicly available online](https://about.gitlab.com/handbook/), and it exemplifies the depth of thought and commitment to a written-first ethos. With over 2,000 pages detailing everything from the company's vision and values to specific operational guidelines, it's a testament to the power of written documentation in ensuring clarity, alignment, and transparency. New employees can hit the ground running, having access to a reservoir of knowledge, while stakeholders and potential partners get an in-depth understanding of the company's ethos, strategies, and processes.
 
 ## Implementing a Writing-First Culture in Your Company
 
@@ -138,7 +138,7 @@ Here are some other helpful tips to remember
 
 When companies are inclined towards written communication, it's not enough to merely increase the volume of what's written; the quality of that writing is paramount. Clear, proficient, and effective writing reduces ambiguities, misinterpretations, and ensures that the message's intent and content are aligned.
 
-#### Grice's Maxims
+#### [Grice's Maxims](https://en.wikipedia.org/wiki/Cooperative_principle)
 
 Philosopher H.P. Grice articulated four conversational maxims that, while originally intended for spoken communication, are highly relevant to written discourse:
 
