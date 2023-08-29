@@ -9,7 +9,7 @@ categories:
 tags:
     - Blog
 ---
-Imagine this: You're in a meeting room or Zoom call, listening to the discussion, but you can't help but glance at your mounting list of tasks. You're thinking about the code you could be debugging, the document you could be drafting, or the designs you could be reviewing. As the conversation continues to meander, going past the scheduled time limit, there's still a noticeable absence of concrete action items or documented decisions made, and as it concludes you are left with a lingering sense of ambiguity.
+Imagine this: You're in a meeting room or Zoom call, listening to the discussion, but you can't help but glance at your mounting list of tasks. You're thinking about the code you could be debugging, the document you could be drafting, or the designs you could be reviewing. As the conversation continues to meander, going past the scheduled time limit, there's still a noticeable absence of concrete action items or documented decisions made, and as it concludes you are left with a lingering sense of uncertainty.
 
 Sound familiar? It should. [According to a study by Atlassian](https://www.atlassian.com/time-wasting-at-work-infographic), the average employee attends 62 meetings a month and considers half of them as time wasted. In a modern corporate landscape, meetings have become the default mode of communication and decision-making. But do they always serve our best interests? Quite frequently, the answer is no. An over-reliance on meetings can lead to wasted hours, dwindling productivity, and an overarching sense of meeting fatigue.
 
@@ -23,7 +23,7 @@ Each meeting consumes not just its allocated duration but also the preparation t
 
 Meetings require mental and emotional energy. Continuous or back-to-back meetings can leave employees feeling drained, leading to decreased productivity for the rest of the day. This is especially true for introverted team members who might find constant social interaction taxing. The phenomenon of [Zoom fatigue](https://en.wikipedia.org/wiki/Zoom_fatigue) during the pandemic is a glaring example of the physical and psychological toll of excessive meetings.
 
-On the face of it, a one-hour meeting might seem innocuous. But when multiple team members are involved, the cumulative hours add up. For instance, a one-hour meeting with five team members equates to five work hours. When quantifying meetings in this manner it's imperative to ask if the return on this time investment is truly beneficial.
+On the face of it, a one-hour meeting might seem innocuous. But when multiple team members are involved, the cumulative hours add up. For instance, a one-hour meeting with five team members equates to five work hours. When quantifying meetings in this manner it's imperative to ask every time if the return on this time investment is truly beneficial.
 
 Every hour spent in a meeting is an hour not spent on other productive tasks. The time could have been utilized for strategic planning, research, execution of tasks, or even creative brainstorming. The lost opportunities can often far outweigh the tangible outcomes of the meeting, especially when it lacks sufficient planning.
 
@@ -35,7 +35,7 @@ With more meetings comes more decisions. Every decision, big or small, requires 
 
 An over-reliance on meetings can lead to a [groupthink](https://en.wikipedia.org/wiki/Groupthink) mentality, where unique perspectives are suppressed in favor of conformity. Groupthink is a phenomenon where the desire for group consensus overrides people's common sense desire to present alternatives, critique a position, or express an unpopular opinion. It often results in irrational decision-making outcomes. The urge to conform and the aversion to dissent can stifle innovation, limit diverse perspectives, and sometimes even lead to costly mistakes.
 
-### Loss of valuable ideas
+### Loss of context and details
 
 If nothing is being written down in a meeting, valuable ideas and decisions can be lost as soon as the meeting ends. Our memories are fallible, and without a written record, the details of the discussion may be misremembered or forgotten entirely. Effective meetings start with a clear agenda and conclude with documented decisions and action points.
 
