@@ -37,7 +37,11 @@ An over-reliance on meetings can lead to a [groupthink](https://en.wikipedia.org
 
 ### Loss of context and details
 
-If nothing is being written down in a meeting, valuable ideas and decisions can be lost as soon as the meeting ends. Our memories are fallible, and without a written record, the details of the discussion may be misremembered or forgotten entirely. Effective meetings start with a clear agenda and conclude with documented decisions and action points.
+If nothing is being written down in a meeting, valuable ideas and decisions can be lost as soon as the meeting ends. Our memories are fallible, and without a written record, the details of the discussion may be misremembered or forgotten entirely. Effective meetings start with a clear agenda and conclude with documented decisions and action points. 
+
+Especially in the realm of software development, details are pivotal. In the embryonic stages of any software project, the initial design decisions made often have ripple effects throughout the project’s lifespan. For example, the choice of a database system, a framework, or even a programming language can deeply influence not only the performance and capabilities of the final product but also the project's cost, timeline, and scalability.
+
+A minor oversight in choosing the right architecture or neglecting potential scaling concerns can result in exorbitant costs later when the system needs to be restructured or even rebuilt from scratch. When a system is launched and interacts with its end-users, every detail (or the lack thereof) comes into focus. Users experience the product through its interface, speed, reliability, and functionality, not the underlying code. At this juncture, the accumulation of all detailed decisions and any oversights becomes apparent. Thus, the nuances and the minute details of design choices can dictate the future trajectory and viability of a project.
 
 ### Reduced Autonomy
 
@@ -126,7 +130,7 @@ If a meeting is necessary, ensure it begins with a written agenda. Encourage tea
 
 Here are some other helpful tips to remember
 
-**Use Plain Language**: Especially in corporate settings, there's a tendency to use complex terms or jargon. While some specific terms might be necessary, always ensure your intended audience understands them.
+**Use Plain Language**: Especially in corporate settings, there's a tendency to use complex terms or jargon. While some specific terms might be necessary, always ensure your intended audience understands them. Avoid double negatives.
 
 **Feedback Loops**: After drafting, seek feedback. Sometimes, what's clear to the writer might be ambiguous to the reader. Regular feedback helps identify and rectify such gaps.
 
