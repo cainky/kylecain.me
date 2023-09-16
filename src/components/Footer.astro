@@ -1,0 +1,80 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-border py-8 sm:py-12 mt-12 sm:mt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col gap-6">
+      <!-- Main footer row -->
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div class="text-text-secondary text-sm">
+          &copy; {currentYear} Kyle Cain
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <a
+            href="https://github.com/cainky"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-text-secondary hover:text-primary transition-colors text-sm min-h-[44px] flex items-center"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kyle-cain/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-text-secondary hover:text-primary transition-colors text-sm min-h-[44px] flex items-center"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/sponsors/cainky"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-pink-400 hover:text-pink-300 transition-colors text-sm flex items-center gap-1 min-h-[44px]"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            Sponsor
+          </a>
+        </div>
+      </div>
+
+      <!-- License row -->
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4 border-t border-border/50 text-center sm:text-left">
+        <p class="text-text-secondary/70 text-xs">
+          Open source under
+          <a
+            href="https://github.com/cainky/kylecain.me/blob/master/LICENSE"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary/70 hover:text-primary transition-colors"
+          >
+            GPL-3.0
+          </a>
+        </p>
+        <p class="text-text-secondary/70 text-xs">
+          Built with
+          <a
+            href="https://astro.build"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary/70 hover:text-primary transition-colors"
+          >
+            Astro
+          </a>
+          &
+          <a
+            href="https://tailwindcss.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary/70 hover:text-primary transition-colors"
+          >
+            Tailwind
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+// Fetch all GitHub repos at build time, sorted by stars
+async function getGitHubRepos() {
+  try {
+    const response = await fetch('https://api.github.com/users/cainky/repos?per_page=100');
+    if (!response.ok) throw new Error('Failed to fetch repos');
+    const repos = await response.json();
+    return repos
+      .filter((repo: any) => !repo.fork && !repo.archived)
+      .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count)
+      .map((repo: any) => ({
+        name: repo.name,
+        description: repo.description,
+        url: repo.html_url,
+        language: repo.language,
+        stars: repo.stargazers_count,
+        topics: repo.topics || [],
+      }));
+  } catch (error) {
+    console.error('Error fetching GitHub repos:', error);
+    return [];
+  }
+}
+
+const projects = await getGitHubRepos();
+
+// Get unique languages for filtering
+const languages = [...new Set(projects.map((p: any) => p.language).filter(Boolean))];
+---
+
+<BaseLayout
+  title="Projects | Kyle Cain"
+  description="Open source projects and contributions by Kyle Cain"
+>
+  <Section
+    title="Projects"
+    subtitle="Open source projects and experiments"
+    class="pt-24"
+  >
+    <!-- Language Filter -->
+    {languages.length > 0 && (
+      <div class="mb-6 sm:mb-8 flex flex-wrap gap-2" id="language-filter">
+        <button
+          class="filter-btn active px-4 py-2 text-sm rounded-lg border border-border hover:border-primary/50 transition-colors min-h-[44px]"
+          data-language="all"
+        >
+          All
+        </button>
+        {languages.map((lang) => (
+          <button
+            class="filter-btn px-4 py-2 text-sm rounded-lg border border-border text-text-secondary hover:border-primary/50 hover:text-text-primary transition-colors min-h-[44px]"
+            data-language={lang}
+          >
+            {lang}
+          </button>
+        ))}
+      </div>
+    )}
+
+    <!-- Projects List -->
+    <div class="space-y-4" id="projects-list">
+      {projects.map((project: any, index: number) => (
+        <div
+          class="project-item animate-on-scroll"
+          data-language={project.language || 'other'}
+          style={`animation-delay: ${index * 0.05}s`}
+        >
+          <ProjectCard {...project} />
+        </div>
+      ))}
+    </div>
+
+    {projects.length === 0 && (
+      <p class="text-text-secondary text-center py-12">
+        Unable to load projects. Please check back later.
+      </p>
+    )}
+  </Section>
+</BaseLayout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const language = btn.getAttribute('data-language');
+
+      // Update active button
+      filterBtns.forEach((b) => {
+        b.classList.remove('active', 'bg-primary/10', 'text-primary', 'border-primary/50');
+        b.classList.add('text-text-secondary');
+      });
+      btn.classList.add('active', 'bg-primary/10', 'text-primary', 'border-primary/50');
+      btn.classList.remove('text-text-secondary');
+
+      // Filter projects
+      projectItems.forEach((item) => {
+        const itemLang = item.getAttribute('data-language');
+        if (language === 'all' || itemLang === language) {
+          (item as HTMLElement).style.display = 'block';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Set initial active state
+  document.querySelector('.filter-btn[data-language="all"]')?.classList.add('bg-primary/10', 'text-primary', 'border-primary/50');
+</script>
+
+<style>
+  .filter-btn.active {
+    @apply bg-primary/10 text-primary border-primary/50;
+  }
+</style>

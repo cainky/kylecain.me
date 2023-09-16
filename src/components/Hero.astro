@@ -1,0 +1,110 @@
+---
+interface Props {
+  name?: string;
+  tagline?: string;
+  subtitle?: string;
+}
+
+const {
+  name = 'Kyle Cain',
+  tagline = 'I enjoy building elegant solutions to complex problems',
+  subtitle = '',
+} = Astro.props;
+---
+
+<section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <!-- Greeting -->
+    <p class="text-text-secondary text-base sm:text-lg mb-3 sm:mb-4 animate-fade-in">Hello, I'm</p>
+
+    <!-- Name -->
+    <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 animate-fade-up" style="animation-delay: 0.1s;">
+      <span class="text-gradient">{name}</span>
+    </h1>
+
+    <!-- Tagline - responsive text that wraps on mobile -->
+    <div class="mb-4 sm:mb-6 animate-fade-up" style="animation-delay: 0.2s;">
+      <p class="tagline text-lg sm:text-xl md:text-3xl font-medium text-text-primary leading-relaxed">
+        {tagline}
+      </p>
+    </div>
+
+    <!-- Subtitle -->
+    {subtitle && (
+      <p class="text-text-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 animate-fade-up px-2" style="animation-delay: 0.3s;">
+        {subtitle}
+      </p>
+    )}
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-up px-4" style="animation-delay: 0.4s;">
+      <a href="/projects" class="btn-primary text-center">
+        View Projects
+      </a>
+      <a href="/blog" class="btn-secondary text-center">
+        Read Blog
+      </a>
+    </div>
+
+    <!-- Scroll Indicator - hidden on very small screens -->
+    <div class="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" style="animation-delay: 1s;">
+      <svg class="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Typewriter effect only on larger screens */
+  @media (min-width: 640px) {
+    .tagline {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #6366f1;
+      width: fit-content;
+      margin: 0 auto;
+      animation:
+        typing 2.5s steps(50, end) forwards,
+        blink 0.75s step-end 4;
+    }
+  }
+
+  /* On mobile, just show text normally with fade */
+  @media (max-width: 639px) {
+    .tagline {
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out 0.3s forwards;
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #6366f1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

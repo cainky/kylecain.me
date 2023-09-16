@@ -1,0 +1,136 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  language?: string;
+  stars?: number;
+  topics?: string[];
+  blogPost?: {
+    title: string;
+    url: string;
+  };
+}
+
+const { name, description, url, language, stars, topics = [], blogPost } = Astro.props;
+
+const languageColors: Record<string, string> = {
+  TypeScript: '#3178c6',
+  JavaScript: '#f7df1e',
+  Python: '#3776ab',
+  Rust: '#dea584',
+  Go: '#00add8',
+  Java: '#b07219',
+  'C#': '#239120',
+  C: '#555555',
+  'C++': '#f34b7d',
+  Ruby: '#cc342d',
+  PHP: '#4f5d95',
+  Swift: '#f05138',
+  Kotlin: '#a97bff',
+  Dart: '#00b4ab',
+  HTML: '#e34c26',
+  CSS: '#1572b6',
+  Shell: '#89e051',
+};
+---
+
+<div class="project-card card group cursor-pointer">
+  <div class="flex justify-between items-start gap-2 mb-3">
+    <div class="flex items-center gap-2 min-w-0">
+      <svg class="w-5 h-5 text-text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm14.5 4.5a.75.75 0 00-1.28-.53l-3.72 3.72-1.72-1.72a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l2.47-2.47 1.72 1.72a.75.75 0 001.06 0l4.25-4.25a.75.75 0 00.22-.53z" clip-rule="evenodd" />
+      </svg>
+      <h3 class="text-base sm:text-lg font-semibold text-text-primary group-hover:text-primary transition-colors truncate">
+        {name}
+      </h3>
+    </div>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-text-secondary hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center flex-shrink-0 -mr-2"
+      aria-label={`View ${name} on GitHub`}
+    >
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  </div>
+
+  <p class="text-text-secondary text-sm mb-4 line-clamp-2">
+    {description || 'No description available'}
+  </p>
+
+  <!-- Project Details -->
+  <div class="project-details hidden">
+    {topics.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-4">
+        {topics.slice(0, 5).map((topic) => (
+          <span class="px-2 py-1 text-xs bg-primary/10 text-primary rounded-md">
+            {topic}
+          </span>
+        ))}
+      </div>
+    )}
+
+    {blogPost && (
+      <div class="border-t border-border pt-4 mt-4">
+        <p class="text-xs text-text-secondary mb-1">Related Article</p>
+        <a
+          href={blogPost.url}
+          class="text-sm text-primary hover:underline"
+        >
+          {blogPost.title}
+        </a>
+      </div>
+    )}
+  </div>
+
+  <!-- Footer with language and stars -->
+  <div class="flex items-center justify-between mt-4 pt-4 border-t border-border">
+    <div class="flex items-center gap-4">
+      {language && (
+        <div class="flex items-center gap-1.5">
+          <span
+            class="w-3 h-3 rounded-full"
+            style={`background-color: ${languageColors[language] || '#6e7681'}`}
+          ></span>
+          <span class="text-xs text-text-secondary">{language}</span>
+        </div>
+      )}
+      {stars !== undefined && stars > 0 && (
+        <div class="flex items-center gap-1">
+          <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          <span class="text-xs text-text-secondary">{stars}</span>
+        </div>
+      )}
+    </div>
+    <button class="expand-btn text-xs text-text-secondary hover:text-primary transition-colors flex items-center gap-1 min-h-[44px] px-2 -mr-2">
+      <span class="expand-text">Details</span>
+      <svg class="w-4 h-4 expand-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.project-card').forEach((card) => {
+    const btn = card.querySelector('.expand-btn');
+    const details = card.querySelector('.project-details');
+    const icon = card.querySelector('.expand-icon');
+    const text = card.querySelector('.expand-text');
+
+    btn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      details?.classList.toggle('hidden');
+      icon?.classList.toggle('rotate-180');
+      if (text) {
+        text.textContent = details?.classList.contains('hidden') ? 'Details' : 'Less';
+      }
+    });
+  });
+</script>

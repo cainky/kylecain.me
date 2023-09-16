@@ -1,0 +1,247 @@
+---
+// Interactive particle network background using Canvas - optimized for smooth rendering
+---
+
+<canvas id="particle-canvas" class="fixed inset-0 -z-10 pointer-events-none"></canvas>
+
+<script>
+  const canvas = document.getElementById('particle-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d', { alpha: true })!;
+
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  let mouseX = -1000;
+  let mouseY = -1000;
+  let targetMouseX = -1000;
+  let targetMouseY = -1000;
+  let isMouseActive = false;
+  let mouseTimeout: number;
+
+  // Pixel ratio for crisp rendering
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+  // Configuration
+  const config = {
+    particleCount: Math.min(100, Math.floor((width * height) / 12000)),
+    lineDistance: 120,
+    mouseRadius: 180,
+    baseSpeed: 0.15,
+  };
+
+  interface Particle {
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+    size: number;
+  }
+
+  let particles: Particle[] = [];
+  let animationId: number;
+
+  function init() {
+    // Set canvas size with device pixel ratio for crisp lines
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.scale(dpr, dpr);
+
+    particles = [];
+    const count = Math.min(100, Math.floor((width * height) / 12000));
+
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * config.baseSpeed * 2,
+        vy: (Math.random() - 0.5) * config.baseSpeed * 2,
+        size: Math.random() * 1.5 + 0.5,
+      });
+    }
+  }
+
+  function update() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Smooth mouse position
+    mouseX += (targetMouseX - mouseX) * 0.1;
+    mouseY += (targetMouseY - mouseY) * 0.1;
+
+    // Draw connections first (behind particles)
+    ctx.lineCap = 'round';
+
+    for (let i = 0; i < particles.length; i++) {
+      const p1 = particles[i];
+
+      // Draw connections to nearby particles
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const dx = p1.x - p2.x;
+        const dy = p1.y - p2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < config.lineDistance) {
+          const opacity = Math.pow(1 - dist / config.lineDistance, 2) * 0.3;
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+
+      // Draw connection to mouse when active
+      if (isMouseActive) {
+        const dx = mouseX - p1.x;
+        const dy = mouseY - p1.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < config.mouseRadius) {
+          const opacity = Math.pow(1 - dist / config.mouseRadius, 2) * 0.5;
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(mouseX, mouseY);
+          ctx.strokeStyle = `rgba(34, 211, 238, ${opacity})`;
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Update and draw particles
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+
+      // Mouse interaction - gentle push
+      if (isMouseActive) {
+        const dx = p.x - mouseX;
+        const dy = p.y - mouseY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < config.mouseRadius && dist > 0) {
+          const force = (config.mouseRadius - dist) / config.mouseRadius;
+          const pushX = (dx / dist) * force * 0.5;
+          const pushY = (dy / dist) * force * 0.5;
+          p.vx += pushX;
+          p.vy += pushY;
+        }
+      }
+
+      // Apply velocity
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Damping
+      p.vx *= 0.98;
+      p.vy *= 0.98;
+
+      // Add slight random movement
+      p.vx += (Math.random() - 0.5) * 0.02;
+      p.vy += (Math.random() - 0.5) * 0.02;
+
+      // Speed limit
+      const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+      if (speed > 1) {
+        p.vx = (p.vx / speed) * 1;
+        p.vy = (p.vy / speed) * 1;
+      }
+
+      // Wrap around edges
+      if (p.x < -10) p.x = width + 10;
+      if (p.x > width + 10) p.x = -10;
+      if (p.y < -10) p.y = height + 10;
+      if (p.y > height + 10) p.y = -10;
+
+      // Draw particle as small dot
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(99, 102, 241, 0.6)';
+      ctx.fill();
+    }
+
+    // Draw subtle mouse indicator when active
+    if (isMouseActive) {
+      ctx.beginPath();
+      ctx.arc(mouseX, mouseY, 4, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(34, 211, 238, 0.6)';
+      ctx.fill();
+    }
+
+    animationId = requestAnimationFrame(update);
+  }
+
+  function handleResize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    init();
+  }
+
+  function handleMouseMove(e: MouseEvent) {
+    targetMouseX = e.clientX;
+    targetMouseY = e.clientY;
+    isMouseActive = true;
+
+    clearTimeout(mouseTimeout);
+    mouseTimeout = window.setTimeout(() => {
+      isMouseActive = false;
+      targetMouseX = -1000;
+      targetMouseY = -1000;
+    }, 2000);
+  }
+
+  function handleMouseLeave() {
+    isMouseActive = false;
+    targetMouseX = -1000;
+    targetMouseY = -1000;
+  }
+
+  function handleTouchMove(e: TouchEvent) {
+    if (e.touches.length > 0) {
+      targetMouseX = e.touches[0].clientX;
+      targetMouseY = e.touches[0].clientY;
+      isMouseActive = true;
+
+      clearTimeout(mouseTimeout);
+      mouseTimeout = window.setTimeout(() => {
+        isMouseActive = false;
+        targetMouseX = -1000;
+        targetMouseY = -1000;
+      }, 2000);
+    }
+  }
+
+  function handleTouchEnd() {
+    isMouseActive = false;
+    targetMouseX = -1000;
+    targetMouseY = -1000;
+  }
+
+  // Initialize
+  init();
+  update();
+
+  // Event listeners
+  window.addEventListener('resize', handleResize);
+  document.addEventListener('mousemove', handleMouseMove);
+  document.addEventListener('mouseleave', handleMouseLeave);
+  document.addEventListener('touchmove', handleTouchMove, { passive: true });
+  document.addEventListener('touchend', handleTouchEnd);
+
+  // Cleanup on page navigation (for Astro)
+  document.addEventListener('astro:before-swap', () => {
+    cancelAnimationFrame(animationId);
+    window.removeEventListener('resize', handleResize);
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mouseleave', handleMouseLeave);
+    document.removeEventListener('touchmove', handleTouchMove);
+    document.removeEventListener('touchend', handleTouchEnd);
+  });
+</script>
+
+<style>
+  #particle-canvas {
+    background: transparent;
+  }
+</style>
