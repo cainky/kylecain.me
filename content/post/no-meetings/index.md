@@ -19,7 +19,7 @@ Meetings are an important part of any business. They bring teams together and fo
 
 ### Inefficiently invested time and energy
 
-Each meeting consumes not just its allocated duration but also the preparation time and the time it takes for employees to switch their focus from their tasks to the meeting, and vice versa. Over time, these hours add up, and excessive meetings can become one of the biggest time-drainers for teams, leaving little time for actual work. With a significant chunk of the workday spent in meetings, employees often rush through their tasks to meet deadlines. This can lead to mistakes, oversight, and reduced quality of work.
+Each meeting consumes not just its allocated duration but also the preparation time and the time it takes for employees to switch their focus from their tasks to the meeting, and vice versa. Over time, these hours add up, and excessive meetings can become one of the biggest time-drainers for teams, leaving little time for actual work. With a significant chunk of the workday spent in meetings, employees often rush through their tasks to meet deadlines. This can lead to mistakes, oversight, and ultimately an overall reduced quality of work.
 
 Meetings require mental and emotional energy. Continuous or back-to-back meetings can leave employees feeling drained, leading to decreased productivity for the rest of the day. This is especially true for introverted team members who might find constant social interaction taxing. The phenomenon of [Zoom fatigue](https://en.wikipedia.org/wiki/Zoom_fatigue) during the pandemic is a glaring example of the physical and psychological toll of excessive meetings.
 
@@ -33,7 +33,7 @@ With more meetings comes more decisions. Every decision, big or small, requires 
 
 ### Groupthink mentality
 
-An over-reliance on meetings can lead to a [groupthink](https://en.wikipedia.org/wiki/Groupthink) mentality, where unique perspectives are suppressed in favor of conformity. Groupthink is a phenomenon where the desire for group consensus overrides people's common sense desire to present alternatives, critique a position, or express an unpopular opinion. It often results in irrational decision-making outcomes. The urge to conform and the aversion to dissent can stifle innovation, limit diverse perspectives, and sometimes even lead to costly mistakes.
+An over-reliance on meetings can lead to a [groupthink](https://en.wikipedia.org/wiki/Groupthink) mentality, where unique perspectives are suppressed in favor of conformity. Groupthink is a phenomenon where the desire for group consensus overrides people's desire to present alternatives, critique a position, or express an unpopular opinion. It often results in irrational decision-making outcomes. The urge to conform and the aversion to dissent can stifle innovation, limit diverse perspectives, and sometimes even lead to costly mistakes.
 
 ### Loss of context and details
 
@@ -120,7 +120,7 @@ If a meeting is necessary, ensure it begins with a written agenda. Encourage tea
 
 **Tools and Resources**: Use collaborative document and knowledge sharing platforms (Notion, Jira) to foster this shift. There are also various tools available, like Grammarly or Hemingway App, that can assist writers in crafting clear and concise content. Encourage their use.
 
-**Create templates**: Give teammates a starting point with sample docs, create templates that other teams can use as inspiration for their own documents.
+**Create templates**: Give teammates a starting point with sample documents, creating templates that other teams can use as inspiration for their own documents.
 
 **Allocate 'No Meeting' Days**: Designate specific days of the week as 'no meeting' days, allowing team members to focus solely on their tasks. This encourages them to communicate through written channels on these days.
 
@@ -197,9 +197,9 @@ While there are undeniable advantages to a written-first culture, any strategy h
 
 ## Finding the Balance
 
-Meetings are essential for fostering personal connections, brainstorming new ideas, and discussing complex issues — but the key is to strike a balance. Use meetings judiciously and supplement them with robust written communication. If you must have meetings, be sure to include an agenda sufficiently beforehand so all participants can prepare properly and be sure the decisions made, including the reasoning why are clearly defined and documented by the end of the meeting.
+Meetings are essential for fostering personal connections, brainstorming new ideas, and discussing complex issues — but the key is to strike a balance. Use meetings judiciously and supplement them with robust written communication. If you must have meetings, be sure to include an agenda sufficiently beforehand so all participants can prepare properly and be sure the decisions made, including the reasoning why, are clearly defined and documented by the end of the meeting.
 
-In conclusion, shifting to a written-first culture can have significant benefits for your team's productivity and satisfaction. It’s time we reconsider the paradigm that equates meetings with progress, and explore ways of working in a more structured and methodical manner. As the future of work continues to evolve, isn't it time we reconsidered not just where we work, but how we communicate? 
+In conclusion, shifting to a written-first culture can have significant benefits for your team's productivity and satisfaction. It’s time we reconsider the paradigm that equates meetings with progress, and explore ways of working in a more structured and methodical manner. As the future of work continues to evolve, isn't it time we reconsidered not just where we work, but how we communicate?
 
 To aid in remembering these concepts, you can save this helpful infographic summarizing the key points of running successful meetings.
 
