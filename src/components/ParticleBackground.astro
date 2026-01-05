@@ -161,14 +161,6 @@
       ctx.fill();
     }
 
-    // Draw subtle mouse indicator when active
-    if (isMouseActive) {
-      ctx.beginPath();
-      ctx.arc(mouseX, mouseY, 4, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(34, 211, 238, 0.6)';
-      ctx.fill();
-    }
-
     animationId = requestAnimationFrame(update);
   }
 
