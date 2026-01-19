@@ -21,7 +21,7 @@
   "homepage": "https://github.com/cainky/kylecain.me#readme",
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.16.6",
+    "astro": "^5.16.11",
     "tailwindcss": "^3.4.19"
   }
 }
